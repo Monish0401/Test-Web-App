@@ -10,25 +10,35 @@
 
 <body>
 
-    <!-- Side navigation -->
-    <div id="mySidenav" class="sidenav">
-        <span class="closebtn" onclick="closeNav()">&times;</span>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </div>
+     <!-- Horizontal nav for desktop -->
+  <div class="topnav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
 
-    <!-- Open button -->
-    <button class="openbtn" onclick="openNav()">☰ Menu</button>
+  <!-- Sidebar nav for mobile -->
+  <div id="mySidenav" class="sidenav">
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
 
-    <!-- Page content -->
-    <div class="content">
-        <h2>Responsive Slide-in Navbar</h2>
-        <p>This is a simple page with a responsive slide-in navigation bar.</p>
-        <p>On smaller screens, click the "Menu" button to toggle the navbar.</p>
-    </div>
+  <!-- Menu button (only on mobile) -->
+  <button class="openbtn" onclick="openNav()">☰ Menu</button>
 
+  <!-- Page content -->
+  <div class="content">
+    <h2>Responsive Navbar</h2>
+    <p>Resize the browser:</p>
+    <ul>
+      <li>On small screens → Slide-in vertical menu with ☰ button</li>
+      <li>On big screens → Horizontal top navigation</li>
+    </ul>
+  </div>
 
 
     <script src="script.js"></script>
