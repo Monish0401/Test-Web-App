@@ -4,7 +4,28 @@ body {
       overflow-x: hidden;
     }
 
-    /* Sidebar (default hidden on small screens) */
+    /* Top nav (desktop) */
+    .topnav {
+      display: none; /* hidden on small screens */
+      background-color: #111;
+      overflow: hidden;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f1f1f1;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #575757;
+    }
+
+    /* Sidebar (mobile) */
     .sidenav {
       height: 100%;
       width: 0;
@@ -40,7 +61,7 @@ body {
       cursor: pointer;
     }
 
-    /* Open button */
+    /* Menu button (mobile) */
     .openbtn {
       font-size: 20px;
       cursor: pointer;
@@ -58,21 +79,10 @@ body {
     /* Page content */
     .content {
       padding: 20px;
-      transition: margin-left 0.3s;
     }
 
-    /* Desktop view: sidebar always open */
+    /* Responsive rules */
     @media (min-width: 768px) {
-      .sidenav {
-        width: 250px !important; /* Always open */
-      }
-      .sidenav .closebtn {
-        display: none; /* Hide close button on desktop */
-      }
-      .openbtn {
-        display: none; /* Hide menu button on desktop */
-      }
-      .content {
-        margin-left: 250px;
-      }
+      .sidenav, .openbtn { display: none; } /* Hide sidebar + button on desktop */
+      .topnav { display: block; } /* Show horizontal navbar */
     }
