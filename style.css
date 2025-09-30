@@ -66,11 +66,6 @@ body {
     /* Keep sidebar open on larger screens */
   }
 
-  .openbtn {
-    display: none;
-    /* Hide toggle button on big screens */
-  }
-
   .content {
     margin-left: 250px;
   }
