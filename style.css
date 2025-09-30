@@ -4,6 +4,18 @@ body {
       overflow-x: hidden;
     }
 
+    .logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f4f4f4;
+    }
+
+    .logos img{
+      height: 50px;
+    }
+
     /* Top nav (desktop) */
     .topnav {
       display: none; /* hidden on small screens */
