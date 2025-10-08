@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>SDR UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header with two logos-->
+    <div class="header">
+        <div class="left">
+            <img src="static/logo/Space_Applications_Centre_logo.png" alt="SAC Logo">
+        </div>
+        <h1>Software Defined Radio(SDR) Payload Commanding User Inteface</h1>
+        <div class="right">
+            <img src="static/logo/Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Logo">
+        </div>
+    </div>
+
+    <!-- Horizontal nav for desktop -->
+    <div class="topnav">
+        <a href="index.html" target="_blank">Home</a>
+        <a href="about.html" target="_blank">About</a>
+        <a href="services.html" target="_blank">Services</a>
+        <a href="contact.html" target="_blank">Contact</a>
+    </div>
+
+    <!-- Sidebar nav for mobile -->
+    <div id="mySidenav" class="sidenav">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="index.html" target="_blank">Home</a>
+        <a href="about.html" target="_blank">About</a>
+        <a href="services.html" target="_blank">Services</a>
+        <a href="contact.html" target="_blank">Contact</a>
+    </div>
+
+    <!-- Menu button (only on mobile) -->
+    <button class="openbtn" onclick="openNav()">☰ Menu</button>
+
+    <!-- Page content -->
+    <div class="content">
+        <h2>This is Services Page</h2>
+        <p>Resize the browser:</p>
+        <ul>
+            <li>On small screens → Slide-in vertical menu with ☰ button</li>
+            <li>On big screens → Horizontal top navigation</li>
+        </ul>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
