@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import header from "../components/ui/header";
+// import header from "../components/ui/header";
 
 function App() {
   const [sideNavOpen, setSideNavOpen] = useState(false);
@@ -18,7 +18,12 @@ function App() {
   return (
     <>
       
-      <header />
+      {/* <header /> */}
+      <div className="header">
+        <img src="Space_Applications_Centre_logo.png" alt="SAC Logo" />
+        <h1>Software Defined Radio(SDR) Payload Commanding User Inteface</h1>
+        <img src="Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Logo" />
+      </div>
 
       <button className="menu-btn" onClick={openNav}>
         ☰ Menu
