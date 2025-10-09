@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 // import header from "../components/ui/header";
 
 function App() {
   const [sideNavOpen, setSideNavOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   const openNav = () => setSideNavOpen(true);
   const closeNav = () => {
@@ -14,6 +15,19 @@ function App() {
 
   const toggleMobileDropdown = () =>
     setMobileDropdownOpen((prev) => !prev);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
+  useEffect(() =>{
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }, []);
 
   return (
     <>
@@ -43,7 +57,14 @@ function App() {
 
         <a href="/services/">Services</a>
         <a href="/contact/">Contact</a>
+
+         {/* Theme toggle button */}
+      <button className="theme-toggle" onClick={toggleTheme}>
+        {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+      </button>
       </div>
+
+     
 
       {/* Side Navbar (Mobile) */}
       <div
@@ -68,6 +89,11 @@ function App() {
 
         <a href="/services/">Services</a>
         <a href="/contact/">Contact</a>
+
+        {/* Theme toggle for mobile */}
+        <div className="mobile-theme-toggle" onClick={toggleTheme}>
+          {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+        </div>
       </div>
     </>
   );

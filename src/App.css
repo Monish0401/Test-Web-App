@@ -1,3 +1,19 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #000;
+  --header-bg: #1a1a1a;
+  --nav-bg: #333;
+  --nav-hover: #575757;
+}
+
+[data-theme="dark"] {
+  --bg-color: #181818;
+  --text-color: #f4f4f4;
+  --header-bg: #000;
+  --nav-bg: #222;
+  --nav-hover: #444;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -126,6 +142,23 @@ body {
   text-align: left;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+  margin-left: auto;
+  margin-right: 20px;
+  background: none;
+  border: 1px solid #ccc;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--nav-hover);
+}
+
 /* Mobile dropdown */
 .mobile-dropdown {
   cursor: pointer;
@@ -150,6 +183,19 @@ body {
   background-color: #444;
 }
 
+/* Mobile theme toggle */
+.mobile-theme-toggle {
+  color: white;
+  padding: 12px 32px;
+  cursor: pointer;
+  background-color: #222;
+  font-size: 16px;
+}
+
+.mobile-theme-toggle:hover {
+  background-color: var(--nav-hover);
+}
+
 @media screen and (max-width: 768px) {
   .topnav {
     display: none;
@@ -162,4 +208,8 @@ body {
   .dropdown:hover .dropdown-content {
     display: none;
   }
+}
+
+html {
+  transition: background 0.3s, color 0.3s;
 }
