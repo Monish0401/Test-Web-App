@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1a1a1a;
+  background-color: white;
   padding: 10px 20px;
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 .header h1 {
-  color: white;
+  color: #1a1a1a;
   font-size: 24px;
   text-align: center;
   flex-grow: 1;
