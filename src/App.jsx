@@ -27,13 +27,13 @@ function App() {
       </button>
 
       <div className="topnav">
-        <a href="/">Home</a>
+        <a href="/">Payload Status</a>
 
         <div className="dropdown">
-          <a href="/about/">Interactions ▾</a>
+          <a href="/about/">Configurations ▾</a>
           <div className="dropdown-content">
-            <a href="/about/team.html">Text Based</a>
-            <a href="/about/history.html">Data Based</a>
+            <a href="/about/team.html">Text Based Config</a>
+            <a href="/about/history.html">Data Based Config</a>
             {/* <a href="/about/mission.html">Mission</a> */}
           </div>
         </div>
@@ -50,15 +50,15 @@ function App() {
         <span className="closebtn" onClick={closeNav}>
           &times;
         </span>
-        <a href="/">Home</a>
+        <a href="/">Payload Status</a>
 
         <div className="mobile-dropdown" onClick={toggleMobileDropdown}>
-          Interactions ▾
+          Configurations ▾
         </div>
         {mobileDropdownOpen && (
           <div className="mobile-dropdown-content">
-            <a href="/about/team.html">Text Based</a>
-            <a href="/about/history.html">Data Based</a>
+            <a href="/about/team.html">Text Based Config</a>
+            <a href="/about/history.html">Data Based Config</a>
             {/* <a href="/about/mission.html">Mission</a> */}
           </div>
         )}
