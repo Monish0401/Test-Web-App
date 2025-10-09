@@ -34,7 +34,7 @@ body {
 /* Top nav */
 .topnav {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   background-color: #333;
 }
 
