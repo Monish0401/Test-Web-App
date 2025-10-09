@@ -12,6 +12,7 @@ function App() {
     setSideNavOpen(false);
     setMobileDropdownOpen(false);
   };
+  
 
   const toggleMobileDropdown = () =>
     setMobileDropdownOpen((prev) => !prev);
@@ -27,7 +28,7 @@ function App() {
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
-  }, []);
+  }, [savedTheme]);
 
   return (
     <>
@@ -60,7 +61,7 @@ function App() {
 
          {/* Theme toggle button */}
       <button className="theme-toggle" onClick={toggleTheme}>
-        {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+        {theme === "light" ? "🌙" : "☀️"}
       </button>
       </div>
 
@@ -92,7 +93,7 @@ function App() {
 
         {/* Theme toggle for mobile */}
         <div className="mobile-theme-toggle" onClick={toggleTheme}>
-          {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+          {theme === "light" ? "🌙" : "☀️"}
         </div>
       </div>
     </>
