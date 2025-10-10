@@ -109,8 +109,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./components/ui/Nav_Bar";
 import "./App.css";
 
+// Pages
 const Home = () => <h2 style={{ textAlign: "center" }}>Welcome to Home Page</h2>;
-const About = () => <h2 style={{ textAlign: "center" }}>About Us</h2>;
+const ConfigText = () => <h2 style={{ textAlign: "center" }}>Text-Based Interactions</h2>;
+const ConfigData = () => <h2 style={{ textAlign: "center" }}>Data-Based Interactions</h2>;
 const Services = () => <h2 style={{ textAlign: "center" }}>Our Services</h2>;
 const Contact = () => <h2 style={{ textAlign: "center" }}>Contact Us</h2>;
 
@@ -119,11 +121,13 @@ export default function App() {
     <Router>
       <Navigation />
       <Routes>
-        <Route path="index.html" element={<Home />} />
-        <Route path="#" element={<About />} />
-        <Route path="#" element={<Services />} />
-        <Route path="#" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/config/text" element={<ConfigText />} />
+        <Route path="/config/data" element={<ConfigData />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
 }
+

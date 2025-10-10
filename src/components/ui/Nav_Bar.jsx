@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaServicestack, FaEnvelope, FaMoon, FaSun } from "react-icons/fa";
-import { Radio, FileText, Database, MonitorCog } from "lucide-react"
+import { Radio, FileText, Database, MonitorCog } from "lucide-react";
 import "../../App.css";
 
 export default function Navigation() {
@@ -10,15 +10,11 @@ export default function Navigation() {
   const [theme, setTheme] = useState("light");
   const location = useLocation();
 
-  // Apply theme
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
 
-  // Theme toggle
   const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
-
-  // Helpers
   const openNav = () => setIsNavOpen(true);
   const closeNav = () => setIsNavOpen(false);
   const toggleDropdown = () => setIsDropdownOpen((p) => !p);
@@ -33,33 +29,37 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu Button */}
-      <button className="menu-btn" onClick={openNav}>☰ Menu</button>
+      <button className="menu-btn" onClick={openNav}>
+        ☰ Menu
+      </button>
 
       {/* Desktop Navbar */}
       <div className="topnav">
-        <Link to="index.html" className={location.pathname === "index.html" ? "active" : ""}>
+        <Link to="/" className={location.pathname === "/" ? "active" : ""}>
           <Radio /> Payload Status
         </Link>
 
+        {/* Dropdown as button, not <a> */}
         <div className="dropdown">
-          <Link
-            to="#"
-            className={location.pathname.startsWith("#") ? "active" : ""}
+          <button
+            className={`nav-link ${location.pathname.startsWith("/config") ? "active" : ""}`}
+            onClick={toggleDropdown}
           >
             <MonitorCog /> Configurations ▾
-          </Link>
-          <div className="dropdown-content">
-            <Link to="#"><FileText /> Text-Based Interactions</Link>
-            <Link to="#"> <Database /> Data-Based Interactions</Link>
-            {/* <Link to="/about/mission">Mission</Link> */}
-          </div>
+          </button>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <Link to="/config/text"> <FileText /> Text-Based Interactions</Link>
+              <Link to="/config/data"> <Database /> Data-Based Interactions</Link>
+            </div>
+          )}
         </div>
 
-        <Link to="#" className={location.pathname === "#" ? "active" : ""}>
+        <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>
           <FaServicestack /> Services
         </Link>
 
-        <Link to="#" className={location.pathname === "#" ? "active" : ""}>
+        <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
           <FaEnvelope /> Contact
         </Link>
 
@@ -71,37 +71,32 @@ export default function Navigation() {
       </div>
 
       {/* Sidebar (Mobile) */}
-      <div
-        id="mySidenav"
-        className="sidenav"
-        style={{ width: isNavOpen ? "250px" : "0" }}
-      >
+      <div className="sidenav" style={{ width: isNavOpen ? "250px" : "0" }}>
         <span className="closebtn" onClick={closeNav}>
           &times;
         </span>
 
-        <Link to="index.html" onClick={closeNav} className={location.pathname === "index.html" ? "active" : ""}>
+        <Link to="/" onClick={closeNav} className={location.pathname === "/" ? "active" : ""}>
           <Radio /> Payload Status
         </Link>
 
         <div className="dropdown">
-          <a href="#" onClick={toggleDropdown}>
+          <button className="nav-link" onClick={toggleDropdown}>
             <MonitorCog /> Configurations ▾
-          </a>
+          </button>
           {isDropdownOpen && (
-            <div className="dropdown-content" style={{ position: "relative" }}>
-              <Link to="#" onClick={closeNav}><FileText /> Text-Based Interactions</Link>
-              <Link to="#" onClick={closeNav}><Database /> Data-Based Interactions</Link>
-              {/* <Link to="/about/mission" onClick={closeNav}>Mission</Link> */}
+            <div className="dropdown-content">
+              <Link to="/config/text" onClick={closeNav}> <FileText /> Text-Based Interactions</Link>
+              <Link to="/config/data" onClick={closeNav}> <Database /> Data-Based Interactions</Link>
             </div>
           )}
         </div>
 
-        <Link to="#" onClick={closeNav} className={location.pathname === "#" ? "active" : ""}>
+        <Link to="/services" onClick={closeNav} className={location.pathname === "/services" ? "active" : ""}>
           <FaServicestack /> Services
         </Link>
 
-        <Link to="#" onClick={closeNav} className={location.pathname === "#" ? "active" : ""}>
+        <Link to="/contact" onClick={closeNav} className={location.pathname === "/contact" ? "active" : ""}>
           <FaEnvelope /> Contact
         </Link>
 
