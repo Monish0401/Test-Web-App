@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaServicestack, FaEnvelope, FaMoon, FaSun } from "react-icons/fa";
 import { Radio, FileText, Database, MonitorCog } from "lucide-react"
-import "./App.css";
+import "../../App.css";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
