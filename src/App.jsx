@@ -118,8 +118,7 @@ const Services = () => <h2 style={{ textAlign: "center" }}>Our Services</h2>;
 const Contact = () => <h2 style={{ textAlign: "center" }}>Contact Us</h2>;
 
 export default function App() {
-  return (
-    
+  return (    
     <Router>
       <Navigation />
       <Routes>
@@ -129,12 +128,11 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <div>
+        <Footer />
+      </div>
     </Router>
-    <>
-    <div>
-      <Footer />
-    </div>
-    </>
+    
   );
 }
 
