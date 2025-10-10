@@ -121,7 +121,7 @@ export default function App() {
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/sdr_ui" element={<Home />} />
         <Route path="/config/text" element={<ConfigText />} />
         <Route path="/config/data" element={<ConfigData />} />
         <Route path="/services" element={<Services />} />

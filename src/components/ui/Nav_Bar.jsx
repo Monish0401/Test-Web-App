@@ -35,18 +35,18 @@ export default function Navigation() {
 
       {/* Desktop Navbar */}
       <div className="topnav">
-        <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+        <Link to="/sdr_ui" className={location.pathname === "/sdr_ui" ? "active" : ""}>
           <Radio /> Payload Status
         </Link>
 
         {/* Dropdown as button, not <a> */}
         <div className="dropdown">
-          <a
+          <button
             className={`nav-link ${location.pathname.startsWith("/config") ? "active" : ""}`}
             onClick={toggleDropdown}
           >
             <MonitorCog /> Configurations ▾
-          </a>
+          </button>
           {isDropdownOpen && (
             <div className="dropdown-content">
               <Link to="/config/text"> <FileText /> Text-Based Interactions</Link>
@@ -76,7 +76,7 @@ export default function Navigation() {
           &times;
         </span>
 
-        <Link to="/" onClick={closeNav} className={location.pathname === "/" ? "active" : ""}>
+        <Link to="/sdr_ui" onClick={closeNav} className={location.pathname === "/sdr_ui" ? "active" : ""}>
           <Radio /> Payload Status
         </Link>
 
