@@ -37,29 +37,29 @@ export default function Navigation() {
 
       {/* Desktop Navbar */}
       <div className="topnav">
-        <Link to="#" className={location.pathname === "#" ? "active" : ""}>
+        <Link to="index.html" className={location.pathname === "index.html" ? "active" : ""}>
           <Radio /> Payload Status
         </Link>
 
         <div className="dropdown">
           <Link
-            to=""
-            className={location.pathname.startsWith("") ? "active" : ""}
+            to="#"
+            className={location.pathname.startsWith("#") ? "active" : ""}
           >
             <MonitorCog /> Configurations ▾
           </Link>
           <div className="dropdown-content">
-            <Link to=""><FileText /> Text-Based Interactions</Link>
-            <Link to=""> <Database /> Data-Based Interactions</Link>
+            <Link to="#"><FileText /> Text-Based Interactions</Link>
+            <Link to="#"> <Database /> Data-Based Interactions</Link>
             {/* <Link to="/about/mission">Mission</Link> */}
           </div>
         </div>
 
-        <Link to="" className={location.pathname === "" ? "active" : ""}>
+        <Link to="#" className={location.pathname === "#" ? "active" : ""}>
           <FaServicestack /> Services
         </Link>
 
-        <Link to="" className={location.pathname === "" ? "active" : ""}>
+        <Link to="#" className={location.pathname === "#" ? "active" : ""}>
           <FaEnvelope /> Contact
         </Link>
 
@@ -80,7 +80,7 @@ export default function Navigation() {
           &times;
         </span>
 
-        <Link to="#" onClick={closeNav} className={location.pathname === "#" ? "active" : ""}>
+        <Link to="index.html" onClick={closeNav} className={location.pathname === "index.html" ? "active" : ""}>
           <Radio /> Payload Status
         </Link>
 
@@ -90,18 +90,18 @@ export default function Navigation() {
           </a>
           {isDropdownOpen && (
             <div className="dropdown-content" style={{ position: "relative" }}>
-              <Link to="" onClick={closeNav}><FileText /> Text-Based Interactions</Link>
-              <Link to="" onClick={closeNav}><Database /> Data-Based Interactions</Link>
+              <Link to="#" onClick={closeNav}><FileText /> Text-Based Interactions</Link>
+              <Link to="#" onClick={closeNav}><Database /> Data-Based Interactions</Link>
               {/* <Link to="/about/mission" onClick={closeNav}>Mission</Link> */}
             </div>
           )}
         </div>
 
-        <Link to="" onClick={closeNav} className={location.pathname === "" ? "active" : ""}>
+        <Link to="#" onClick={closeNav} className={location.pathname === "#" ? "active" : ""}>
           <FaServicestack /> Services
         </Link>
 
-        <Link to="" onClick={closeNav} className={location.pathname === "" ? "active" : ""}>
+        <Link to="#" onClick={closeNav} className={location.pathname === "#" ? "active" : ""}>
           <FaEnvelope /> Contact
         </Link>
 
