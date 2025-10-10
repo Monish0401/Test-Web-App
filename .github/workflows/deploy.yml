@@ -32,11 +32,11 @@ jobs:
       - name: Install React Router
         run: npm install react-router-dom
 
-      - name: Build project
-        run: npm run build
-
       - name: Install React Icons
         run: npm install react-icons
+
+      - name: Build project
+        run: npm run build
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
