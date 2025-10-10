@@ -23,9 +23,9 @@ export default function Navigation() {
     <>
       {/* Header */}
       <div className="header">
-        <img src="images/left-logo.png" alt="Left Logo" />
-        <h1>My Website Title</h1>
-        <img src="images/right-logo.png" alt="Right Logo" />
+        <img src="Space_Applications_Centre_logo.png" alt="SAC Logo" />
+        <h1>Software Defined Radio(SDR) Payload Commanding User Inteface</h1>
+        <img src="Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO Logo" />
       </div>
 
       {/* Mobile Menu Button */}
