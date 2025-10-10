@@ -41,12 +41,12 @@ export default function Navigation() {
 
         {/* Dropdown as button, not <a> */}
         <div className="dropdown">
-          <button
+          <a
             className={`nav-link ${location.pathname.startsWith("/config") ? "active" : ""}`}
             onClick={toggleDropdown}
           >
             <MonitorCog /> Configurations ▾
-          </button>
+          </a>
           {isDropdownOpen && (
             <div className="dropdown-content">
               <Link to="/config/text"> <FileText /> Text-Based Interactions</Link>
