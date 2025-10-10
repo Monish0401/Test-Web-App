@@ -119,10 +119,10 @@ export default function App() {
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about/*" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="#" element={<Home />} />
+        <Route path="" element={<About />} />
+        <Route path="" element={<Services />} />
+        <Route path="" element={<Contact />} />
       </Routes>
     </Router>
   );
