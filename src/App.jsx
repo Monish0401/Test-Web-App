@@ -119,6 +119,7 @@ const Contact = () => <h2 style={{ textAlign: "center" }}>Contact Us</h2>;
 
 export default function App() {
   return (
+    <>
     <Router>
       <Navigation />
       <Routes>
@@ -132,6 +133,7 @@ export default function App() {
     <div>
       <Footer />
     </div>
+    </>
   );
 }
 
