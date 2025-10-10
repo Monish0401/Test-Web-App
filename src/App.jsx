@@ -107,6 +107,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./components/ui/Nav_Bar";
+import Footer from "./components/ui/Footer";
 import "./App.css";
 
 // Pages
@@ -128,6 +129,9 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
+    <div>
+      <Footer />
+    </div>
   );
 }
 
