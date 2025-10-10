@@ -106,7 +106,7 @@
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navigation from "../components/ui/Nav_Bar";
+import Navigation from "./components/ui/Nav_Bar";
 import "./App.css";
 
 const Home = () => <h2 style={{ textAlign: "center" }}>Welcome to Home Page</h2>;
