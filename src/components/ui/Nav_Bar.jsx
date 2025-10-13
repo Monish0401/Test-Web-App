@@ -137,7 +137,7 @@ export default function Navigation() {
 
   // Navigation links
   const navItems = [
-    { to: "/", label: "Payload Status", icon: Radio },
+    { to: "/sdr_ui", label: "Payload Status", icon: Radio },
     {
       label: "Configurations",
       icon: MonitorCog,
