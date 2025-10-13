@@ -122,6 +122,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import "../styles/nav_bar_styles";
 
 export default function Navigation() {
   const location = useLocation();
