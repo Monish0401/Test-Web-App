@@ -1,6 +1,7 @@
 import { react } from "React";
+import "../../App.css";
 
-export default function Header() {
+const Header = () => {
   return (
     <div className="header">
         <img src="Space_Applications_Centre_logo.png" alt="SAC Logo" />
