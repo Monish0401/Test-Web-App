@@ -1,6 +1,6 @@
 import React from "react";
 import { Radio, Settings, Sun, Moon } from "lucide-react";
-import "./styles/nav_bar_styles.css";
+import "../styles/nav_bar_styles.css";
 
 export default function Navigation({ currentPage, setCurrentPage, theme, setTheme }) {
   const navItems = [
