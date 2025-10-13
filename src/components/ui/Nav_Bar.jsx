@@ -167,7 +167,7 @@ export default function Navigation() {
                   onMouseLeave={() => setIsDropdownOpen(false)}
                 >
                   <button
-                    className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                    className={`flex items-center gap-2 px-3 py-2 rounded-lg  ${
                       location.pathname.startsWith("/config")
                         ? "bg-blue-600 text-white"
                         : "text-slate-300 hover:bg-slate-800 hover:text-white"
