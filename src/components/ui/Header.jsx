@@ -1,4 +1,6 @@
-export default function header() {
+import { react } from "React";
+
+export default function Header() {
   return (
     <div className="header">
         <img src="Space_Applications_Centre_logo.png" alt="SAC Logo" />
@@ -7,3 +9,5 @@ export default function header() {
       </div>
   );
 }
+
+export default Header;

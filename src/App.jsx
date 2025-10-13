@@ -106,6 +106,7 @@
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/ui/Header";
 import Navigation from "./components/ui/Nav_Bar";
 import Footer from "./components/ui/Footer";
 import "./App.css";
@@ -120,6 +121,7 @@ const Contact = () => <h2 style={{ textAlign: "center" }}>Contact Us</h2>;
 export default function App() {
   return (    
     <Router>
+      <Header />
       <Navigation />
       <Routes>
         <Route path="/sdr_ui" element={<Home />} />
