@@ -108,11 +108,12 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/ui/Header";
 import Navigation from "./components/ui/Nav_Bar";
+import Home from "./components/pages/Home";
 import Footer from "./components/ui/Footer";
 import "./App.css";
 
 // Pages
-const Home = () => <h2 style={{ textAlign: "center" }}>Welcome to Home Page</h2>;
+
 const ConfigText = () => <h2 style={{ textAlign: "center" }}>Text-Based Interactions</h2>;
 const ConfigData = () => <h2 style={{ textAlign: "center" }}>Data-Based Interactions</h2>;
 const Services = () => <h2 style={{ textAlign: "center" }}>Our Services</h2>;
