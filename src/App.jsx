@@ -113,7 +113,7 @@ import Footer from "./components/ui/Footer";
 import "./App.css";
 
 // Pages
-
+const Home = () => <Home />;
 const ConfigText = () => <h2 style={{ textAlign: "center" }}>Text-Based Interactions</h2>;
 const ConfigData = () => <h2 style={{ textAlign: "center" }}>Data-Based Interactions</h2>;
 const Services = () => <h2 style={{ textAlign: "center" }}>Our Services</h2>;
