@@ -1,4 +1,4 @@
-import { react } from "React";
+import React from "react";
 import "../../App.css";
 
 const Header = () => {
