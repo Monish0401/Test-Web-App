@@ -20,7 +20,7 @@ export default function Navigation({ currentPage, setCurrentPage, theme, setThem
           : "bg-white border-gray-200"
       } border-b`}
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Navigation Buttons */}
           <div className="flex gap-2">
