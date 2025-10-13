@@ -155,11 +155,7 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Left side - Logo / Title */}
-          <div className="flex items-center gap-2">
-            <Radio className="text-blue-400 w-6 h-6" />
-            <span className="font-semibold text-lg">SDR Payload Control</span>
-          </div>
-
+          
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-4">
             {navItems.map((item, idx) =>
